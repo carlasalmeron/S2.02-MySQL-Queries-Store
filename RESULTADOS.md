@@ -2,25 +2,25 @@
 
 
 ## 📈 Resumen
-✅ 39 correctas de 41 queries
+✅ 40 correctas de 41 queries
 
 ## ✅ Query 1: Correcto
 
-⏱ Tiempo: 0.37 ms
+⏱ Tiempo: 0.40 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
 
 ## ✅ Query 2: Correcto
 
-⏱ Tiempo: 0.29 ms
+⏱ Tiempo: 0.37 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
 
 ## ✅ Query 3: Correcto
 
-⏱ Tiempo: 0.30 ms
+⏱ Tiempo: 0.32 ms
 🔍 No se usó ningún índice en esta consulta.
 
 🚨 **Problemas detectados:**
@@ -30,49 +30,49 @@
 
 ## ✅ Query 4: Correcto
 
-⏱ Tiempo: 0.27 ms
+⏱ Tiempo: 0.32 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
 
 ## ✅ Query 5: Correcto
 
-⏱ Tiempo: 0.29 ms
+⏱ Tiempo: 0.32 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
 
 ## ✅ Query 6: Correcto
 
-⏱ Tiempo: 0.29 ms
+⏱ Tiempo: 0.33 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
 
 ## ✅ Query 7: Correcto
 
-⏱ Tiempo: 0.27 ms
+⏱ Tiempo: 0.31 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
 
 ## ✅ Query 8: Correcto
 
-⏱ Tiempo: 0.32 ms
+⏱ Tiempo: 0.31 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
 
 ## ✅ Query 9: Correcto
 
-⏱ Tiempo: 0.28 ms
+⏱ Tiempo: 0.30 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
 
 ## ✅ Query 10: Correcto
 
-⏱ Tiempo: 0.27 ms
+⏱ Tiempo: 0.29 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
@@ -86,35 +86,35 @@
 
 ## ✅ Query 12: Correcto
 
-⏱ Tiempo: 0.28 ms
+⏱ Tiempo: 0.34 ms
 ✅ Se usó índice(s) en la consulta: codigo_fabricante
 
 ---
 
 ## ✅ Query 13: Correcto
 
-⏱ Tiempo: 0.27 ms
+⏱ Tiempo: 0.28 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
 
 ## ✅ Query 14: Correcto
 
-⏱ Tiempo: 0.26 ms
+⏱ Tiempo: 0.29 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
 
 ## ✅ Query 15: Correcto
 
-⏱ Tiempo: 0.27 ms
+⏱ Tiempo: 0.30 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
 
 ## ✅ Query 16: Correcto
 
-⏱ Tiempo: 0.28 ms
+⏱ Tiempo: 0.27 ms
 🔍 No se usó ningún índice en esta consulta.
 
 🚨 **Problemas detectados:**
@@ -124,7 +124,7 @@
 
 ## ✅ Query 17: Correcto
 
-⏱ Tiempo: 0.26 ms
+⏱ Tiempo: 0.28 ms
 🔍 No se usó ningún índice en esta consulta.
 
 🚨 **Problemas detectados:**
@@ -134,35 +134,48 @@
 
 ## ✅ Query 18: Correcto
 
-⏱ Tiempo: 0.28 ms
+⏱ Tiempo: 0.29 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
 
 ## ✅ Query 19: Correcto
 
-⏱ Tiempo: 0.27 ms
+⏱ Tiempo: 0.28 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
 
 ## ✅ Query 20: Correcto
 
-⏱ Tiempo: 0.29 ms
+⏱ Tiempo: 0.31 ms
 ✅ Se usó índice(s) en la consulta: codigo_fabricante
 
 ---
 
 ## ✅ Query 21: Correcto
 
-⏱ Tiempo: 0.30 ms
+⏱ Tiempo: 0.34 ms
 ✅ Se usó índice(s) en la consulta: codigo_fabricante, PRIMARY
 
 ---
 
-## ❌ Query 22: Error
-- **Descripción**: 1054 (42S22): Unknown column 'precio.precio' in 'field list'
+## ❌ Query 22: Incorrecto
+```diff
+--- 
++++ 
+@@ -1,4 +1,4 @@
+-nombre | precio | nombre del fabricante
++nombre de producto | precio | nombre de fabricante
+ Monitor 24 LED Full HD | 202.00 | Asus
+ Monitor 27 LED Full HD | 245.99 | Asus
+ Memoria RAM DDR4 8GB | 120.00 | Crucial
+```
 
+⏱ Tiempo: 0.33 ms
+✅ Se usó índice(s) en la consulta: codigo_fabricante, PRIMARY
+
+---
 
 ## ✅ Query 23: Correcto
 
@@ -173,42 +186,42 @@
 
 ## ✅ Query 24: Correcto
 
-⏱ Tiempo: 0.30 ms
+⏱ Tiempo: 0.34 ms
 ✅ Se usó índice(s) en la consulta: codigo_fabricante, PRIMARY
 
 ---
 
 ## ✅ Query 25: Correcto
 
-⏱ Tiempo: 0.30 ms
+⏱ Tiempo: 0.34 ms
 ✅ Se usó índice(s) en la consulta: codigo_fabricante, PRIMARY
 
 ---
 
 ## ✅ Query 26: Correcto
 
-⏱ Tiempo: 0.33 ms
+⏱ Tiempo: 0.32 ms
 ✅ Se usó índice(s) en la consulta: codigo_fabricante, PRIMARY
 
 ---
 
 ## ✅ Query 27: Correcto
 
-⏱ Tiempo: 0.32 ms
+⏱ Tiempo: 0.33 ms
 ✅ Se usó índice(s) en la consulta: codigo_fabricante, PRIMARY
 
 ---
 
 ## ✅ Query 28: Correcto
 
-⏱ Tiempo: 0.32 ms
+⏱ Tiempo: 0.34 ms
 ✅ Se usó índice(s) en la consulta: codigo_fabricante, PRIMARY
 
 ---
 
 ## ✅ Query 29: Correcto
 
-⏱ Tiempo: 0.33 ms
+⏱ Tiempo: 0.34 ms
 ✅ Se usó índice(s) en la consulta: codigo_fabricante, PRIMARY
 
 🚨 **Problemas detectados:**
@@ -218,59 +231,42 @@
 
 ## ✅ Query 30: Correcto
 
-⏱ Tiempo: 0.34 ms
+⏱ Tiempo: 0.32 ms
 ✅ Se usó índice(s) en la consulta: codigo_fabricante, PRIMARY
 
 ---
 
 ## ✅ Query 31: Correcto
 
-⏱ Tiempo: 0.31 ms
+⏱ Tiempo: 0.32 ms
 ✅ Se usó índice(s) en la consulta: codigo_fabricante, PRIMARY
 
 ---
 
 ## ✅ Query 32: Correcto
 
-⏱ Tiempo: 0.32 ms
+⏱ Tiempo: 0.35 ms
 ✅ Se usó índice(s) en la consulta: codigo_fabricante, PRIMARY
 
 ---
 
-## ❌ Query 33: Incorrecto
-```diff
---- 
-+++ 
-@@ -1,8 +1,12 @@
- codigo | nombre
- 1.00 | Asus
-+1.00 | Asus
- 2.00 | Lenovo
-+2.00 | Lenovo
-+3.00 | Hewlett-Packard
- 3.00 | Hewlett-Packard
- 4.00 | Samsung
- 5.00 | Seagate
- 6.00 | Crucial
-+6.00 | Crucial
- 7.00 | Gigabyte
-```
+## ✅ Query 33: Correcto
 
-⏱ Tiempo: 0.33 ms
+⏱ Tiempo: 0.32 ms
 ✅ Se usó índice(s) en la consulta: codigo_fabricante, PRIMARY
 
 ---
 
 ## ✅ Query 34: Correcto
 
-⏱ Tiempo: 0.35 ms
+⏱ Tiempo: 0.40 ms
 ✅ Se usó índice(s) en la consulta: codigo_fabricante
 
 ---
 
 ## ✅ Query 35: Correcto
 
-⏱ Tiempo: 0.35 ms
+⏱ Tiempo: 0.34 ms
 ✅ Se usó índice(s) en la consulta: codigo_fabricante
 
 ---
@@ -287,7 +283,7 @@
 
 ## ✅ Query 37: Correcto
 
-⏱ Tiempo: 0.36 ms
+⏱ Tiempo: 0.38 ms
 ✅ Se usó índice(s) en la consulta: codigo_fabricante
 
 🚨 **Problemas detectados:**
@@ -304,7 +300,7 @@
 
 ## ✅ Query 39: Correcto
 
-⏱ Tiempo: 0.34 ms
+⏱ Tiempo: 0.35 ms
 ✅ Se usó índice(s) en la consulta: codigo_fabricante
 
 ---
@@ -321,7 +317,7 @@
 
 ## ✅ Query 41: Correcto
 
-⏱ Tiempo: 0.40 ms
+⏱ Tiempo: 0.43 ms
 ✅ Se usó índice(s) en la consulta: codigo_fabricante
 
 🚨 **Problemas detectados:**
