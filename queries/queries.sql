@@ -18,9 +18,9 @@ FROM producto;
 
 -- 5. Llista el nom dels productes, el preu en euros i el preu en dòlars estatunidencs (amb un tipus de canvi de 1 € = 1,1 $ i arrodonint el resultat a dues xifres decimals). Utilitza els següents àlies per a les columnes: nom del producte, euros, dòlars.
 SELECT 
-  nombre AS 'nombre del producto', 
+  nombre AS 'nom del producte', 
   precio AS 'euros', 
-  FORMAT(precio * 1.1, 2) AS 'dólares'
+  FORMAT(precio * 1.1, 2) AS 'dòlars'
 FROM producto;
 
 -- 6. Llista els noms (nombre) i els preus de tots els productes de la taula producto, convertint els noms a majúscula.
@@ -103,20 +103,19 @@ JOIN fabricante
 
 -- 22. Llista tots els productes amb nom, preu i nom del fabricant (nombre del fabricante) ordenats alfabèticament.
 SELECT 
-  producto.nombre,
-  producto.precio,
-  fabricante.nombre AS 'nombre del fabricante'
-FROM producto
-JOIN fabricante 
-  ON producto.codigo_fabricante = fabricante.codigo
-ORDER BY producto.nombre ASC;
+    producto.nombre AS 'nombre de producto', 
+    precio.precio, 
+    fabricante.nombre AS 'nombre de fabricante'
+FROM producto 
+INNER JOIN fabricante ON producto.codigo_fabricante = fabricante.codigo
+ORDER BY fabricante.nombre ASC;
 
 -- 23. Retorna una llista amb el codi del producte, nom del producte, codi del fabricant (codigo fabricante) i nom del fabricant (nombre fabricante), de tots els productes de la base de dades.
 SELECT
   producto.codigo,
   producto.nombre,
-  producto.codigo_fabricante AS 'código del fabricante',
-  fabricante.nombre AS 'nombre del fabricante'
+  producto.codigo_fabricante AS 'codigo fabricante',
+  fabricante.nombre AS 'nombre fabricante'
 FROM producto
 JOIN fabricante
   ON producto.codigo_fabricante = fabricante.codigo;
@@ -125,7 +124,7 @@ JOIN fabricante
 SELECT 
 	producto.nombre,
   producto.precio,
-  fabricante.nombre AS 'fabricante'
+  fabricante.nombre AS 'fabricant'
 FROM producto 
 JOIN fabricante 
   ON producto.codigo_fabricante = fabricante.codigo
@@ -195,28 +194,28 @@ WHERE fabricante.nombre LIKE '%e';
 -- 31. Retorna un llistat amb el nom del producte, el seu preu i el nom del fabricant (fabricante), per a tots aquells productes els fabricants dels quals contenen la lletra 'w' en el seu nom.
 SELECT 
 	producto.nombre, 
-  producto.precio,
-  fabricante.nombre AS 'fabricante'
+  	producto.precio,
+  	fabricante.nombre AS 'fabricante'
 FROM producto
 JOIN fabricante 
   ON producto.codigo_fabricante = fabricante.codigo
 WHERE fabricante.nombre LIKE '%W%';
 
 -- 32. Retorna un llistat amb el nom del producte, el seu preu i el nom del fabricant (fabricante), per a tots els productes amb un preu igual o superior a 180 €. Ordena els resultats, primer pel preu en ordre descendent i després pel nom del producte en ordre ascendent.
-SELECT 
+SELECT
 	producto.nombre, 
-  producto.precio,
-  fabricante.nombre AS 'fabricante'
+  	producto.precio,
+  	fabricante.nombre AS 'fabricante'
 FROM producto
 JOIN fabricante 
-  ON producto.codigo_fabricante = fabricante.codigo
+  	ON producto.codigo_fabricante = fabricante.codigo
 WHERE producto.precio >= 180
 ORDER BY producto.precio DESC, producto.nombre ASC;
 
 -- 33. Retorna un llistat amb el codi i el nom de fabricant (fabricante), solament d'aquells fabricants que tenen productes associats en la base de dades.
 SELECT 
 	fabricante.codigo, 
-	fabricante.nombre AS fabricante
+	fabricante.nombre AS nombre
 FROM producto
 JOIN fabricante 
   ON producto.codigo_fabricante = fabricante.codigo;
